@@ -1,0 +1,91 @@
+{
+  "table_structure": {
+    "table_columns": {
+      "id": {
+        "data_type": "number",
+        "is_unique": true,
+        "is_nullable": false
+      },
+      "parent_id": {
+        "data_type": "number",
+        "is_unique": false,
+        "is_nullable": true
+      },
+      "name": {
+        "data_type": "string",
+        "is_unique": false,
+        "is_nullable": false
+      },
+      "icon_url": {
+        "data_type": "string",
+        "is_unique": false,
+        "is_nullable": false
+      }
+    },
+    "table_properties": {
+      "primary_keys": [
+        {
+          "column": "id",
+          "is_identity": true,
+          "seed": 1,
+          "increment": 1
+        }
+      ],
+      "foreign_keys": [
+        {
+          "column": "parent_id",
+          "from_table": "categories",
+          "from_column": "id"
+        }
+      ],
+      "transaction_rules": {
+        "on_row_delete": "set_null"
+      }
+    }
+
+  },
+  "table_data": [
+    {
+      "id": 1,
+      "parent_id": null,
+      "name": "Category 1 Main",
+      "icon_url": ""
+    },
+    {
+      "id": 2,
+      "parent_id": null,
+      "name": "Category 2 Main",
+      "icon_url": ""
+    },
+    {
+      "id": 3,
+      "parent_id": 1,
+      "name": "Category 1 Sub 1",
+      "icon_url": ""
+    },
+    {
+      "id": 4,
+      "parent_id": 1,
+      "name": "Category 1 Sub 2",
+      "icon_url": ""
+    },
+    {
+      "id": 5,
+      "parent_id": null,
+      "name": "Category 3",
+      "icon_url": ""
+    },
+    {
+      "id": 6,
+      "parent_id": 2,
+      "name": "Category 2 Sub 1",
+      "icon_url": ""
+    },
+    {
+      "id": 7,
+      "parent_id": 2,
+      "name": "Category 2 Sub 2",
+      "icon_url": ""
+    }
+  ]
+}

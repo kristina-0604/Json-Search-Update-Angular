@@ -1,0 +1,70 @@
+<div class="wrapper">
+    <div class="header">
+        <div class="title">
+            BLOG SEARCH BOX
+        </div>
+
+        <div class="search_box">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder=" &#61442;  Start searching for a Blog by its properties">
+        </div>
+    </div>
+
+    <div class="table_wrap">
+        <div class="table_header">
+            <ul>
+                <li>
+                    <div class="item">
+                        <div class="id">
+                            <span>ID</span>
+                        </div>
+                        <div class="category">
+                            <span>CATEGORY ID</span>
+                        </div>
+                        <div class="issue">
+                            <span>TITLE</span>
+                        </div>
+                        <div class="issue">
+                            <span>TEXT</span>
+                        </div>
+                        <div class="issue">
+                            <span>IMAGE URL</span>
+                        </div>
+                        <div class="status">
+                            <span>STATUS</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="table_body">
+            <ul *ngFor="let blog of blogs | filter:searchText">
+                <li>
+                    <a routerLink="/blog-detail/{{blog.id}}">
+                    <div class="item">
+                        <div class="id">
+                            <span>{{blog.id}}</span>
+                        </div>
+                        <div class="category">
+                            <span>{{blog.category_id}}</span>
+                        </div>
+                        <div class="issue">
+                            <span>{{blog.title}}</span>
+                        </div>
+                        <div class="issue">
+                            <span>{{blog.text}}</span>
+                        </div>
+                        <div class="issue">
+                            <span>{{blog.img_url}}</span>
+                        </div>
+                        <div class="status">
+                            <span class="open">{{blog.is_active}}</span>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="table_footer"></div>
+    </div>
+
+</div>

@@ -1,0 +1,133 @@
+{
+    "table_structure": {
+        "table_columns": {
+            "id": {
+                "data_type": "number",
+                "is_unique": true,
+                "is_nullable": false
+            },
+            "category_id": {
+                "data_type": "number",
+                "is_unique": false,
+                "is_nullable": false
+            },
+            "title": {
+                "data_type": "string",
+                "is_unique": false,
+                "is_nullable": false,
+                "max_length": 100
+            },
+            "description": {
+                "data_type": "string",
+                "is_unique": false,
+                "is_nullable": true,
+                "max_length": 500
+            },
+            "address": {
+                "data_type": "string",
+                "is_unique": false,
+                "is_nullable": false,
+                "max_length": null
+            },
+            "is_active": {
+                "data_type": "bool",
+                "is_unique": false,
+                "is_nullable": false
+            }
+        },
+        "table_properties": {
+            "primary_keys": [
+                {
+                    "column": "id",
+                    "is_identity": true,
+                    "seed": 1,
+                    "increment": 1
+                }
+            ],
+            "foreign_keys": [
+                {
+                    "column": "category_id",
+                    "from_table": "categories",
+                    "from_column": "id"
+                }
+            ],
+            "transaction_rules": {
+                "on_row_delete": "no_action"
+            }
+        }
+    },
+    "table_data": [
+        {
+            "id": 1,
+            "category_id": 7,
+            "title": "Lorem Ipsum 1",
+            "description": "Lorem ipsum dolor sit amet...",
+            "address": "https://www._______",
+            "is_active": true
+        },
+        {
+            "id": 2,
+            "category_id": 3,
+            "title": "Lorem Ipsum 2",
+            "description": "Lorem ipsum dolor sit amet...",
+            "address": "https://www._______",
+            "is_active": true
+        },
+        {
+            "id": 3,
+            "category_id": 3,
+            "title": "Lorem Ipsum 3",
+            "description": "Lorem ipsum dolor sit amet...",
+            "address": "https://www._______",
+            "is_active": true
+        },
+        {
+            "id": 4,
+            "category_id": 6,
+            "title": "Lorem Ipsum 4",
+            "description": "Lorem ipsum dolor sit amet...",
+            "address": "https://www._______",
+            "is_active": false
+        },
+        {
+            "id": 5,
+            "category_id": 5,
+            "title": "Lorem Ipsum 5",
+            "description": "Lorem ipsum dolor sit amet...",
+            "address": "https://www._______",
+            "is_active": true
+        },
+        {
+            "id": 6,
+            "category_id": 1,
+            "title": "Lorem Ipsum 6",
+            "description": "Lorem ipsum dolor sit amet...",
+            "address": "https://www._______",
+            "is_active": true
+        },
+        {
+            "id": 7,
+            "category_id": 4,
+            "title": "Lorem Ipsum 7",
+            "description": "Lorem ipsum dolor sit amet...",
+            "address": "https://www._______",
+            "is_active": true
+        },
+        {
+            "id": 8,
+            "category_id": 1,
+            "title": "Lorem Ipsum 8",
+            "description": "Lorem ipsum dolor sit amet...",
+            "address": "https://www._______",
+            "is_active": false
+        },
+        {
+            "id": 9,
+            "category_id": 7,
+            "title": "Lorem Ipsum 9",
+            "description": "Lorem ipsum dolor sit amet...",
+            "address": "https://www._______",
+            "is_active": true
+        }
+    ]
+}

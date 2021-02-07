@@ -1,0 +1,116 @@
+{
+  "table_structure": {
+    "table_columns": {
+      "id": {
+        "data_type": "number",
+        "is_unique": true,
+        "is_nullable": false
+      },
+      "category_id": {
+        "data_type": "number",
+        "is_unique": false,
+        "is_nullable": false
+      },
+      "title": {
+        "data_type": "string",
+        "is_unique": false,
+        "is_nullable": false,
+        "max_length": 250
+      },
+      "text": {
+        "data_type": "string",
+        "is_unique": false,
+        "is_nullable": false,
+        "max_length": 2000
+      },
+      "img_url": {
+        "data_type": "string",
+        "is_unique": false,
+        "is_nullable": true
+      },
+      "is_active": {
+        "data_type": "bool",
+        "is_unique": false,
+        "is_nullable": false
+      }
+    },
+    "table_properties": {
+      "primary_keys": [
+        {
+          "column": "id",
+          "is_identity": true,
+          "seed": 1,
+          "increment": 1
+        }
+      ],
+      "foreign_keys": [
+        {
+          "column": "category_id",
+          "from_table": "categories",
+          "from_column": "id"
+        }
+      ],
+      "transaction_rules": {
+        "on_row_delete": "no_action"
+      }
+    }
+  },
+  "table_data": [
+    {
+      "id": 1,
+      "category_id": 3,
+      "title": "Lorem Ipsum 1_Changed_!!!!!!!!!!",
+      "text": "Lorem Ipsum dolor sit amet...",
+      "img_url": "/assets/img/1.png",
+      "is_active": true
+    },
+    {
+      "id": 2,
+      "category_id": 1,
+      "title": "Lorem Ipsum 2",
+      "text": "Lorem Ipsum dolor sit amet...",
+      "img_url": "/assets/img/2.png",
+      "is_active": true
+    },
+    {
+      "id": 3,
+      "category_id": 4,
+      "title": "Lorem Ipsum 3_Changed 4",
+      "text": "Lorem Ipsum dolor sit amet...",
+      "img_url": "/assets/img/3.png",
+      "is_active": false
+    },
+    {
+      "id": 4,
+      "category_id": 4,
+      "title": "Lorem Ipsum 4",
+      "text": "Lorem Ipsum dolor sit amet...",
+      "img_url": "/assets/img/4.png",
+      "is_active": true
+    },
+    {
+      "id": 5,
+      "category_id": 2,
+      "title": "Lorem Ipsum 5",
+      "text": "Lorem Ipsum dolor sit amet...",
+      "img_url": "/assets/img/5.png",
+      "is_active": true
+    },
+    {
+      "id": 6,
+      "category_id": 5,
+      "title": "Lorem Ipsum 6_TRUE to FALSE",
+      "text": "Lorem Ipsum dolor sit amet...",
+      "img_url": "/assets/img/6.png",
+      "is_active": false
+    },
+    {
+      "id": 7,
+      "category_id": 1,
+      "title": "Lorem Ipsum 7",
+      "text": "Lorem Ipsum dolor sit amet...",
+      "img_url": "/assets/img/7.png",
+      "is_active": true
+    }
+  ]
+}

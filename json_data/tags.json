@@ -1,0 +1,52 @@
+{
+  "table_structure": {
+    "table_columns": {
+      "id": {
+        "data_type": "number",
+        "is_unique": true,
+        "is_nullable": false
+      },
+      "name": {
+        "data_type": "string",
+        "is_unique": false,
+        "is_nullable": false,
+        "max_length": 50
+      }
+    },
+    "table_properties": {
+      "primary_keys": [
+        {
+          "column": "id",
+          "is_identity": true,
+          "seed": 1,
+          "increment": 1
+        }
+      ],
+      "transaction_rules": {
+        "on_row_delete": "set_zero"
+      }
+    },
+    "table_data": [
+      {
+        "id": 1,
+        "name": "Tag 1"
+      },
+      {
+        "id": 2,
+        "name": "Tag 2"
+      },
+      {
+        "id": 3,
+        "name": "Tag 3"
+      },
+      {
+        "id": 4,
+        "name": "Tag 4"
+      },
+      {
+        "id": 5,
+        "name": "Tag 5"
+      }
+    ]
+  }
+}
