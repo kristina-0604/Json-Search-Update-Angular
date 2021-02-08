@@ -10,7 +10,7 @@ import { Category } from '../category';
 })
 
 export class BlogComponent implements OnInit {
-  searchText: string;
+  searchText: string="";
   blogs: Blog[] = [];
   blog_display_datas: BlogDisplayType[] = [];
   categories: Category[] = [];
