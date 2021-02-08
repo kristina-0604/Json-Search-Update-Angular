@@ -18,7 +18,7 @@
                             <span>ID</span>
                         </div>
                         <div class="category">
-                            <span>CATEGORY ID</span>
+                            <span>CATEGORY NAME</span>
                         </div>
                         <div class="issue">
                             <span>TITLE</span>
@@ -37,7 +37,7 @@
             </ul>
         </div>
         <div class="table_body">
-            <ul *ngFor="let blog of blogs | filter:searchText">
+            <ul *ngFor="let blog of blog_display_datas | filter : searchText">
                 <li>
                     <a routerLink="/blog-detail/{{blog.id}}">
                     <div class="item">
@@ -45,7 +45,7 @@
                             <span>{{blog.id}}</span>
                         </div>
                         <div class="category">
-                            <span>{{blog.category_id}}</span>
+                            <span>{{blog.category_name}}</span>
                         </div>
                         <div class="issue">
                             <span>{{blog.title}}</span>

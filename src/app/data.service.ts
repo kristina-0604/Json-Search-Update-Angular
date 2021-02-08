@@ -10,7 +10,9 @@ import { Blog } from './blog';
 })
 export class DataService {
 
-  private REST_API_SERVER = "http://localhost:3000/table_data";
+  private BLOG_URL = "http://localhost:3000/table_data";
+  private CATEGORY_URL = "http://localhost:3000/table_data_category";
+
 
   //constructor(){}
 
@@ -29,8 +31,13 @@ export class DataService {
     return throwError(errorMessage);
   }
   
-  public sendGetRequest(){
-    return this.httpClient.get(this.REST_API_SERVER).pipe(retry(3), catchError(this.handleError));
+  public getCategories(id:number){
+    const url = `${this.BLOG_URL}/${id}`;
+    return this.httpClient.get<Blog>(url).pipe(retry(3), catchError(this.handleError));
+  }
+
+  public getBlogs(){
+    return this.httpClient.get(this.CATEGORY_URL).pipe(retry(3), catchError(this.handleError));
   }
 
 }

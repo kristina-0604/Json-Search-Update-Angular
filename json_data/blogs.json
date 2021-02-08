@@ -58,15 +58,15 @@
   "table_data": [
     {
       "id": 1,
-      "category_id": 3,
-      "title": "Lorem Ipsum 1_Changed_!!!!!!!!!!",
+      "category_id": 1,
+      "title": "Lorem Ipsum 1",
       "text": "Lorem Ipsum dolor sit amet...",
       "img_url": "/assets/img/1.png",
       "is_active": true
     },
     {
       "id": 2,
-      "category_id": 1,
+      "category_id": 6,
       "title": "Lorem Ipsum 2",
       "text": "Lorem Ipsum dolor sit amet...",
       "img_url": "/assets/img/2.png",
@@ -74,15 +74,15 @@
     },
     {
       "id": 3,
-      "category_id": 4,
-      "title": "Lorem Ipsum 3_Changed 4",
+      "category_id": 3,
+      "title": "Lorem Ipsum 3",
       "text": "Lorem Ipsum dolor sit amet...",
       "img_url": "/assets/img/3.png",
       "is_active": false
     },
     {
       "id": 4,
-      "category_id": 4,
+      "category_id": 5,
       "title": "Lorem Ipsum 4",
       "text": "Lorem Ipsum dolor sit amet...",
       "img_url": "/assets/img/4.png",
@@ -90,7 +90,7 @@
     },
     {
       "id": 5,
-      "category_id": 2,
+      "category_id": 7,
       "title": "Lorem Ipsum 5",
       "text": "Lorem Ipsum dolor sit amet...",
       "img_url": "/assets/img/5.png",
@@ -98,8 +98,8 @@
     },
     {
       "id": 6,
-      "category_id": 5,
-      "title": "Lorem Ipsum 6_TRUE to FALSE",
+      "category_id": 2,
+      "title": "Lorem Ipsum 6",
       "text": "Lorem Ipsum dolor sit amet...",
       "img_url": "/assets/img/6.png",
       "is_active": false
@@ -111,6 +111,50 @@
       "text": "Lorem Ipsum dolor sit amet...",
       "img_url": "/assets/img/7.png",
       "is_active": true
+    }
+  ],
+  "table_data_category": [
+    {
+      "id": 1,
+      "parent_id": null,
+      "name": "Category 1 Main",
+      "icon_url": ""
+    },
+    {
+      "id": 2,
+      "parent_id": null,
+      "name": "Category 2 Main",
+      "icon_url": ""
+    },
+    {
+      "id": 3,
+      "parent_id": 1,
+      "name": "Category 1 Sub 1",
+      "icon_url": ""
+    },
+    {
+      "id": 4,
+      "parent_id": 1,
+      "name": "Category 1 Sub 2",
+      "icon_url": ""
+    },
+    {
+      "id": 5,
+      "parent_id": null,
+      "name": "Category 3",
+      "icon_url": ""
+    },
+    {
+      "id": 6,
+      "parent_id": 2,
+      "name": "Category 2 Sub 1",
+      "icon_url": ""
+    },
+    {
+      "id": 7,
+      "parent_id": 2,
+      "name": "Category 2 Sub 2",
+      "icon_url": ""
     }
   ]
 }

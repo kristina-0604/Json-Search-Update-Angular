@@ -9,15 +9,13 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http
 import {  throwError } from 'rxjs';
 import { retry, catchError,map, tap } from 'rxjs/operators';
 
-
-
-
 @Injectable({
   providedIn: 'root'
 })
 export class BlogService {
 
   private BLOG_URL = "http://localhost:3000/table_data";
+  private CATEGORY_URL = "http://localhost:3000/table_data_category";
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -47,6 +45,10 @@ export class BlogService {
   public getBlog(id:number){
     const url = `${this.BLOG_URL}/${id}`;
     return this.httpClient.get<Blog>(url).pipe(retry(3), catchError(this.handleError));
+  }
+  
+  public getCategories(){
+    return this.httpClient.get(this.CATEGORY_URL).pipe(retry(3), catchError(this.handleError));
   }
 
   updateBlog(blog: Blog | null){
