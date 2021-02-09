@@ -19,12 +19,14 @@ import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { CategoryDetailComponent } from './category-detail/category-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
-    BlogDetailComponent
+    BlogDetailComponent,
+    CategoryDetailComponent
   ],
   imports: [
     BrowserModule,

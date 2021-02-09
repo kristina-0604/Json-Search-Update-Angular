@@ -9,62 +9,113 @@
         </div>
     </div>
 
-    <div class="table_wrap">
-        <div class="table_header">
-            <ul>
-                <li>
-                    <div class="item">
-                        <div class="id">
-                            <span>ID</span>
-                        </div>
-                        <div class="category">
-                            <span>CATEGORY NAME</span>
-                        </div>
-                        <div class="issue">
-                            <span>TITLE</span>
-                        </div>
-                        <div class="issue">
-                            <span>TEXT</span>
-                        </div>
-                        <div class="issue">
-                            <span>IMAGE URL</span>
-                        </div>
-                        <div class="status">
-                            <span>STATUS</span>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="table_body">
-            <ul *ngFor="let blog of blog_display_datas | filter : searchText">
-                <li>
-                    <a routerLink="/blog-detail/{{blog.id}}">
-                    <div class="item">
-                        <div class="id">
-                            <span>{{blog.id}}</span>
-                        </div>
-                        <div class="category">
-                            <span>{{blog.category_name}}</span>
-                        </div>
-                        <div class="issue">
-                            <span>{{blog.title}}</span>
-                        </div>
-                        <div class="issue">
-                            <span>{{blog.text}}</span>
-                        </div>
-                        <div class="issue">
-                            <span>{{blog.img_url}}</span>
-                        </div>
-                        <div class="status">
-                            <span class="open">{{blog.is_active}}</span>
-                        </div>
-                    </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="table_footer"></div>
-    </div>
+</div>
 
+<div class="container" style="text-align: center;">
+    <br>
+    <div class="col-md-9 col-sm-12" style="text-align: center;float:left">
+        <div class="table_wrap">
+            <div class="table_header">
+                <ul>
+                    <li>
+                        <div class="item">
+                            <div class="id">
+                                <span>ID</span>
+                            </div>
+                            <div class="category">
+                                <span>CATEGORY NAME</span>
+                            </div>
+                            <div class="issue">
+                                <span>TITLE</span>
+                            </div>
+                            <div class="issue">
+                                <span>TEXT</span>
+                            </div>
+                            <div class="issue">
+                                <span>IMAGE URL</span>
+                            </div>
+                            <div class="status">
+                                <span>STATUS</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="table_body">
+                <ul *ngFor="let blog of blog_display_datas | filter : searchText">
+                    <li>
+                        <a routerLink="/blog-detail/{{blog.id}}">
+                        <div class="item">
+                            <div class="id">
+                                <span>{{blog.id}}</span>
+                            </div>
+                            <div class="category">
+                                <span>{{blog.category_name}}</span>
+                            </div>
+                            <div class="issue">
+                                <span>{{blog.title}}</span>
+                            </div>
+                            <div class="issue">
+                                <span>{{blog.text}}</span>
+                            </div>
+                            <div class="issue">
+                                <span>{{blog.img_url}}</span>
+                            </div>
+                            <div class="status">
+                                <span class="open">{{blog.is_active}}</span>
+                            </div>
+                        </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 col-sm-12" style="text-align: center;float:right">
+        <div class="table_wrap">
+            <div class="table_header">
+                <ul>
+                    <li>
+                        <div class="item">
+                            <div class="id">
+                                <span>ID</span>
+                            </div>
+                            <div class="status">
+                                <span>PARENT ID</span>
+                            </div>
+                            <div class="issue">
+                                <span>NAME</span>
+                            </div>
+                            <div class="status">
+                                <span>ICON URL</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="table_body">
+                <ul *ngFor="let cat of categories | filter : searchText">
+                    <li>
+                        <a routerLink="/category-detail/{{cat.id}}">
+                            <div class="item">
+                                <div class="id">
+                                    <span>{{cat.id}}</span>
+                                </div>
+                                <div class="status">
+                                    <span>{{cat.parent_id}}</span>
+                                </div>
+                                <div class="issue">
+                                    <span>{{cat.name}}</span>
+                                </div>
+                                <div class="status">
+                                    <span>{{cat.icon_url}}</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
